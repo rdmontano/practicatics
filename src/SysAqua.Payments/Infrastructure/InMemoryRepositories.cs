@@ -9,14 +9,13 @@ public sealed class InMemoryInvoiceRepository : IInvoiceRepository
     public static readonly Guid SampleInvoiceId = Guid.Parse("11111111-1111-1111-1111-111111111111");
     private readonly ConcurrentDictionary<Guid, Invoice> _items = new();
 
-    public InMemoryInvoiceRepository()
-        : this([new Invoice(SampleInvoiceId, "CLI-0001", 25.50m)])
+    public InMemoryInvoiceRepository(IEnumerable<Invoice>? seed = null)
     {
-    }
+        var invoices = seed?.ToArray() ?? [];
+        if (invoices.Length == 0)
+            invoices = [new Invoice(SampleInvoiceId, "CLI-0001", 25.50m)];
 
-    public InMemoryInvoiceRepository(IEnumerable<Invoice> seed)
-    {
-        foreach (var invoice in seed)
+        foreach (var invoice in invoices)
             _items[invoice.Id] = invoice;
     }
 
@@ -61,4 +60,3 @@ public sealed class InMemoryPaymentRepository : IPaymentRepository
         return Task.CompletedTask;
     }
 }
-
