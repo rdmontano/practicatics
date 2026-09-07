@@ -1,31 +1,14 @@
-# Publicar el repositorio y obtener la evidencia del CI
+# Publicación y evidencia del CI
 
-## 1. Crear el repositorio remoto
+La publicación fue completada en
+https://github.com/rdmontano/practicatics.
 
-En GitHub, cree un repositorio vacío llamado `sysaqua-pagos`. No agregue README,
-licencia ni `.gitignore`, porque estos archivos ya existen localmente.
+## Flujo aplicado
 
-## 2. Vincular y subir las ramas
+1. Se creó la rama `feature/registrar-pago` desde `main`.
+2. Se implementaron la API, las pruebas, el script SQL y el workflow.
+3. Se abrió el pull request #1 hacia `main`.
+4. GitHub Actions compiló la solución y aprobó las cinco pruebas.
+5. El pull request se fusionó después de validar el check verde.
 
-Desde la carpeta extraída del proyecto, ejecute:
-
-```bash
-git remote add origin https://github.com/USUARIO/sysaqua-pagos.git
-git push -u origin main
-git push -u origin feature/documentar-ci
-git push -u origin feature/registrar-pago
-```
-
-Cambie `USUARIO` por su nombre de usuario de GitHub.
-
-## 3. Crear el pull request
-
-Abra un pull request desde `feature/documentar-ci` hacia `main`. Utilice el
-texto incluido en `docs/solicitud_pull_request.md`.
-
-## 4. Capturar la evidencia
-
-Espere a que el check **CI - Build y pruebas / Compilar y ejecutar pruebas**
-aparezca en verde. Abra el detalle y capture una imagen donde se observen el
-repositorio, la rama o commit y la etapa **Ejecutar pruebas automatizadas**.
-
+La evidencia verificable está documentada en `docs/evidencia_ci.md`.
