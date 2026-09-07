@@ -1,0 +1,1 @@
+Coloque aquí la captura real de GitHub Actions en verde después de publicar el repositorio.

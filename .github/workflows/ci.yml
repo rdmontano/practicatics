@@ -1,0 +1,37 @@
+name: CI - Build y pruebas
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Compilar y ejecutar pruebas
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Descargar repositorio
+        uses: actions/checkout@v5
+
+      - name: Configurar .NET 8
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Restaurar dependencias
+        run: dotnet restore SysAqua.Payments.sln
+
+      - name: Compilar
+        run: dotnet build SysAqua.Payments.sln --configuration Release --no-restore
+
+      - name: Ejecutar pruebas automatizadas
+        run: dotnet test SysAqua.Payments.sln --configuration Release --no-build --verbosity normal
