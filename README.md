@@ -79,4 +79,5 @@ Restaura dependencias, compila en modo Release y ejecuta todas las pruebas.
 - https://learn.microsoft.com/en-us/aspnet/core/fundamentals/apis
 - https://learn.microsoft.com/en-us/sql/connect/ado-net/local-transactions
 - https://docs.github.com/actions/guides/building-and-testing-net
-
+- https://github.com/actions/checkout
+- https://github.com/actions/setup-dotnet
