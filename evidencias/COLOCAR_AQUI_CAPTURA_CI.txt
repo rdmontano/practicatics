@@ -1,1 +1,4 @@
-Coloque aquí la captura real de GitHub Actions en verde después de publicar el repositorio.
+La captura real está incluida en el informe PDF de la Unidad 3.
+
+Ejecución verificable:
+https://github.com/rdmontano/practicatics/actions/runs/34142304523
