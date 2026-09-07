@@ -1,24 +1,25 @@
-# Título del pull request
+# Registro del pull request
 
-`docs: consolidar evidencia del CI del módulo de pagos`
+`feat: implementar módulo de pagos de SYSAQUA`
 
 # Descripción
 
 ## Objetivo
 
-Documentar el procedimiento de publicación y verificación del pipeline para el
-módulo de gestión de pagos y recaudación de SYSAQUA.
+Implementar y verificar el módulo de gestión de pagos y recaudación de SYSAQUA.
 
 ## Cambios
 
-- Se añadió la guía para publicar las ramas.
-- Se definieron los pasos para abrir el pull request.
-- Se indicó cómo capturar la ejecución real de GitHub Actions.
+- Se implementaron los endpoints de facturas pendientes y registro de pagos.
+- Se añadieron tres pruebas unitarias y dos de integración.
+- Se incorporó el script transaccional de SQL Server y el workflow de CI.
 
 ## Lista de comprobación
 
 - [x] El cambio se realizó en una rama feature.
 - [x] El README explica el flujo de ramas.
 - [x] El workflow compila y ejecuta las pruebas.
-- [ ] El check de GitHub Actions aparece en verde.
-- [ ] Se agregó la captura al documento madre.
+- [x] El check de GitHub Actions aparece en verde.
+- [x] Se agregó la captura al informe de la Unidad 3.
+
+Pull request fusionado: https://github.com/rdmontano/practicatics/pull/1
